@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base -href=https://NicolasMoreauDiginamic.github.io/AngularTopCollegues/",
+    "build": "ng build --base-href=https://NicolasMoreauDiginamic.github.io/AngularTopCollegues/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
