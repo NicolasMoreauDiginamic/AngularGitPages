@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { CAvis } from './avis/componentAvis';
-import { CCollegue } from './collegue/componantCollegue';
+import { CCollegue } from './collegue/componentCollegue';
 
 @NgModule({
   declarations: [
