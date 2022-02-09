@@ -1,6 +1,6 @@
 export interface Collegue {
     pseudo : string;
-    score : string;
+    score : number;
     photoURL : string;
 
 }
