@@ -2,8 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'collegue', 
-  templateUrl: './collegue.componentCollegue.html',
-  styleUrls: ['./collegue.componentCollegue.scss']
+  templateUrl: './app.collegue.componentCollegue.html',
+  styleUrls: ['./app.collegue.componentCollegue.scss']
 })
 
 export class Collegue implements OnInit {
