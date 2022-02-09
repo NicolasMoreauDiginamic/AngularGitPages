@@ -1,12 +1,14 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Collegue } from '../models/collegue';
+
 
 @Component({
   selector: 'collegue', 
-  templateUrl: './app.collegue.componentCollegue.html',
-  styleUrls: ['./app.collegue.componentCollegue.scss']
+  templateUrl: './componentCollegue.html',
+  styleUrls: ['./componentCollegue.scss']
 })
 
-export class Collegue implements OnInit {
+export class CCollegue implements OnInit {
 
     @Input() paramCollegue?: Collegue;
 
