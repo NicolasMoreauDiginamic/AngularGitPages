@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Collegue } from './models/collegue';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,9 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'top-collegues';
+  unCollegue : Collegue = {
+    photoURL : '',
+    pseudo: 'test',
+    score: '+500'
+  }
 }
