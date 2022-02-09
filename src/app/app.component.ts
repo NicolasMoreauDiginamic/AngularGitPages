@@ -10,7 +10,7 @@ import { Collegue } from './models/collegue';
 export class AppComponent {
   title = 'top-collegues';
   unCollegue : Collegue = {
-    photoURL : '',
+    photoURL : 'https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg',
     pseudo: 'test',
     score: '+500'
   }
