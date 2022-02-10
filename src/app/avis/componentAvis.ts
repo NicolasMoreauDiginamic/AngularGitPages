@@ -1,20 +1,28 @@
-import { Component } from '@angular/core';
+import { EventEmitter,Component, Input, Output } from '@angular/core';
+import { Avis } from '../models/collegue';
 
 @Component({
   selector: 'avis', 
-  template: `
-    <button (click)="aime()">J'aime</button>
-    <button (click)="deteste()">Je deteste</button>
-  `
+  templateUrl : './componentAvis.html',
+  styleUrls : ['./compententAvis.scss']
 })
 
 export class CAvis {
+  @Output() event = new EventEmitter<Avis>();
+  @Input() aimeActif = true;
+  @Input() detesteActif = false;
   
-    aime(){
+  constructor(){
 
-    }
+  }
+  ngOnInit(): void {
+        
+  }
+  aime(){
+    this.event.emit(Avis.Aimer);
+  }
 
-    deteste(){
-
-    }
+  deteste(){
+    this.event.emit(Avis.Detester);
+  }
 }

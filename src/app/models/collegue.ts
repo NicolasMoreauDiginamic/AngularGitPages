@@ -4,3 +4,8 @@ export interface Collegue {
     photoURL : string;
 
 }
+
+export enum Avis {
+    Aimer,
+    Detester
+}
