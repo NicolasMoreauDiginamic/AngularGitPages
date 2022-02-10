@@ -4,8 +4,7 @@ import { Avis, Collegue } from '../models/collegue';
 
 @Component({
   selector: 'collegue', 
-  templateUrl: './componentCollegue.html',
-  styleUrls : ['./componentCollegue.scss']
+  templateUrl: './componentCollegue.html'
 })
 
 export class CCollegue implements OnInit {

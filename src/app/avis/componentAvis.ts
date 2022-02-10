@@ -3,8 +3,7 @@ import { Avis } from '../models/collegue';
 
 @Component({
   selector: 'avis', 
-  templateUrl : './componentAvis.html',
-  styleUrls : ['./compententAvis.scss']
+  templateUrl: './componentAvis.html'
 })
 
 export class CAvis {
