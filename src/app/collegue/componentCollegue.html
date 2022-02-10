@@ -1,6 +1,6 @@
 <div class="text-center">
     <img src="{{paramCollegue.photoURL}}" alt="">
-    <p>{{paramCollegue.pseudo}}</p>
+    <p>{{paramCollegue.pseudo.toUpperCase()}}</p>
     <p>{{paramCollegue.score}}</p>
     <avis (event)="traiterAvis($event)" [aimeActif]="aimeActif" [detesteActif]="detesteActif"></avis>
 </div>

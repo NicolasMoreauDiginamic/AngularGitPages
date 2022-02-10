@@ -14,4 +14,18 @@ export class AppComponent {
     pseudo: 'test',
     score: 500
   }
+
+  listeCollegue: Collegue[] = [{
+    photoURL :'photo2',
+    pseudo: 'test2',
+    score: 1500
+  },{
+    photoURL :'photo3',
+    pseudo: 'test3',
+    score: 2500
+  },{
+    photoURL :'photo4',
+    pseudo: 'test4',
+    score: 2000
+  }]
 }
