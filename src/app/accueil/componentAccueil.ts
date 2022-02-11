@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Collegue } from '../models/collegue';
+import { Component, OnInit } from '@angular/core';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'accueil',
@@ -7,12 +7,16 @@ import { Collegue } from '../models/collegue';
 })
 export class CAccueil implements OnInit {
 
-  @Input() collegues?:Collegue[];
+  //@Input() collegues?:Collegue[];
   
-  constructor() { }
+  constructor(private dataServ: DataService) { }
 
   ngOnInit(): void {
     
+  }
+
+  actualiser(){
+    this.dataServ.rafraichirListeCollegues();
   }
 
 }

@@ -1,3 +1,4 @@
+import { TokenizeResult } from '@angular/compiler/src/ml_parser/lexer';
 import { EventEmitter,Component, Input, Output } from '@angular/core';
 import { Avis } from '../models/collegue';
 
@@ -9,7 +10,7 @@ import { Avis } from '../models/collegue';
 export class CAvis {
   @Output() event = new EventEmitter<Avis>();
   @Input() aimeActif = true;
-  @Input() detesteActif = false;
+  @Input() detesteActif = true;
   
   constructor(){
 

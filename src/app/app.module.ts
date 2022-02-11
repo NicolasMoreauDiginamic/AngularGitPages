@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { CAvis } from './avis/componentAvis';
 import { CCollegue } from './collegue/componentCollegue';
 import { CListeCollegue } from './listeCollegue/componentListCollegue';
+import { ScorePipe } from './pipes/scorePipe';
+import { CRafraichir } from './rafraichir/componentRafraichir';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import { CListeCollegue } from './listeCollegue/componentListCollegue';
     CCollegue,
     CAvis,
     CAccueil,
-    CListeCollegue
+    CListeCollegue,
+    ScorePipe,
+    CRafraichir
   ],
   imports: [
     BrowserModule
