@@ -21,7 +21,7 @@ const routerConfig: Routes = [
     path: 'formulaire', component: CNewCollegue
   },
   {
-    path: 'collegues', component: CListeCollegue
+    path: 'collegues', component: CAccueil
   },
   {
     path:'collegues/pseudo', component: CCollegue
