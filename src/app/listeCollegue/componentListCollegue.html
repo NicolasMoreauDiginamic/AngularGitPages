@@ -1,3 +1,10 @@
-<!-- <p *nglf="tabCols.length ===0">Aucune donnée !</p>
-<collegue *ngFor="let collegueTableau of collegues" [paramCollegue]="collegueTableau"><collegue>
- -->
+<ng-container *ngIf="collegues | async as tabCols; else colAbsent">
+    <p *ngIf="tabCols.length === 0">Accune donnée trouvé</p>
+    <collegue *ngFor="let collegueTableau of tabCols" [col]="collegueTableau"></collegue>
+</ng-container>
+
+<ng-template #colAbsent>
+    <p>
+      Chargement...
+    </p>
+  </ng-template>

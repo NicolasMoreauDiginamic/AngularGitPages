@@ -1,6 +1,6 @@
-<div class="text-center" *nglf="paramCollegue">
-    <img src="{{paramCollegue.photoURL}}" alt="">
-    <p>{{paramCollegue.pseudo.toUpperCase()}}</p>
-    <p>{{paramCollegue.score}}</p>
+<div *ngIf="col">
+    <img src="{{col.photo}}" alt="">
+    <p>{{col.pseudo.toUpperCase()}}</p>
+    <p>{{col.score}}</p>
     <avis (event)="traiterAvis($event)" [aimeActif]="aimeActif" [detesteActif]="detesteActif"></avis>
 </div>

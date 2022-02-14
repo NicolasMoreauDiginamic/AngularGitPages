@@ -10,7 +10,7 @@ import { DataService } from '../services/data.service';
 
 export class CCollegue implements OnInit {
 
-    @Input() paramCollegue!: Collegue;
+    @Input() col!: Collegue;
     aimeActif = false;
     detesteActif = false;
 
@@ -21,15 +21,15 @@ export class CCollegue implements OnInit {
     }
 
     traiterAvis(avis:Avis){
-      if(this.paramCollegue){
-        this.dataServ.donnerUnAvis(this.paramCollegue, avis)
-        .subscribe(colServeur => this.paramCollegue = colServeur);
+      if(this.col){
+        this.dataServ.donnerUnAvis(this.col, avis)
+        .subscribe(colServeur => this.col = colServeur);
       }
     }
 
     gereEtatBtn(){
-      if(this.paramCollegue){
-          const {score} = this.paramCollegue;
+      if(this.col){
+          const {score} = this.col;
           if(score <= -1000){
             this.detesteActif = false;
             this.aimeActif = true;
