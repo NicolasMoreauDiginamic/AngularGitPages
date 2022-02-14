@@ -21,12 +21,12 @@ const routerConfig: Routes = [
     path: 'formulaire', component: CNewCollegue
   },
   {
-    path: 'collegues', component: CAccueil
+    path: 'accueil', component: CAccueil
   },
   {
     path:'collegues/pseudo', component: CCollegue
   },
-  { path: '', pathMatch: 'full', redirectTo: '/liste' },
+  { path: '', pathMatch: 'full', redirectTo: '/accueil' },
 ];
 
 @NgModule({
