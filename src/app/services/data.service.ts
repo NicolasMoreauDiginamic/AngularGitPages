@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Avis, Collegue } from '../models/collegue';
-import { delay, Observable, Subject } from 'rxjs';
+import { Avis, Collegue, CreeCollegue } from '../models/collegue';
+import { Observable, Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class DataService {
 
   private busTabCollegues = new Subject<Collegue[]>();
@@ -26,14 +27,22 @@ export class DataService {
     });
   }
 
+  rechercherCollegueParPseudo(pseudo: string) : Observable<Collegue> {
+    return this.http.get<Collegue>(`https://formation-angular-collegues.herokuapp.com/api/v1/collegues/${pseudo}`);
+  }
+
+  creerCollegue(collegue: Partial<CreeCollegue>){
+    return this.http.post<Collegue>("https://formation-angular-collegues.herokuapp.com/api/v1/collegue",
+      collegue);
+  }
+
   rafraichirListeCollegues(){
-    this.busTabCollegues.next([]);
-    this.listerCollegues()
-    .pipe(
-      delay(3000)
-    )
+    const contrat = this.listerCollegues()
     .subscribe(
       colsServeur => this.busTabCollegues.next(colsServeur)
     );
+
+    contrat.unsubscribe();
   }
+
 }
